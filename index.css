@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    background: conic-gradient(from var(--angle), yellow, green, blue, yellow);
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+    animation: 3.5s spin linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 5px double black;
+    border-radius: 5px;
+    background-color: darkred;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    background-color: black;
+}
+
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#increment-btn {
+    background: green;
+}
+
+#save-btn {
+    background: green;
+}
+
+#save-el {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    min-width: 60vw;
+    min-height: 10vh;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    
+    to {
+        --angle: 360deg;
+    }
+}
